@@ -17,6 +17,13 @@
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+    <!-- Favicons & App Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
     <!-- Custom Modern Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -101,7 +108,10 @@
                     <div class="hero-card-glow"></div>
                     <div class="hero-image-card">
                         <div class="dj-avatar-container">
-                            <img src="https://i.ibb.co/xss2wXF/DSCF8939.jpg" alt="DJ Stefan Nolte am Mischpult" class="dj-avatar-img">
+                            <picture>
+                                <source srcset="assets/img/dj-stefan-nolte.webp" type="image/webp">
+                                <img src="assets/img/dj-stefan-nolte.jpg" alt="DJ Stefan Nolte am Mischpult" class="dj-avatar-img" width="440" height="528" fetchpriority="high">
+                            </picture>
                             
                             <!-- Floating Status Badge -->
                             <div class="dj-floating-badge">

@@ -9,11 +9,17 @@ Offizielle Website für **DJ Stefan Nolte** – Professioneller DJ für Hochzeit
 - **Interaktives Event-Anfrageformular**: Schnellauswahl von Event-Typ, Datum und Gästeanzahl mit Direktanbindung an E-Mail und WhatsApp.
 - **1-Click Copy**: Schnelles Kopieren von Telefonnummer und E-Mail-Adresse mit Toast-Feedback.
 - **Kleinanzeigen Miet-Equipment**: Direkte Einbindung der aktuellen Bestandsliste und Vermietungsangebote auf Kleinanzeigen.
+- **Optimierte Performance & Lokale Assets**: Eigene WebP- und JPEG-Bilder sowie Favicons (SVG, PNG, ICO) und Web-Manifest.
 - **Rechtssicher**: Vollständiges Impressum nach § 5 TMG in einem dezenten Accordion.
 
 ## Projektstruktur
 ```text
 ├── index.html        # Hauptseite (HTML5)
+├── favicon.ico       # Browser-Favicon
+├── site.webmanifest  # Web App Manifest für Mobilgeräte
+├── assets/
+│   ├── img/          # Lokale Bilder (WebP & JPG)
+│   └── icons/        # Favicons in allen Standardgrößen & SVG
 ├── css/
 │   └── style.css     # Modernes Stylesheet mit CSS-Variablen & Responsive Design
 ├── js/
