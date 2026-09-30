@@ -829,6 +829,93 @@ section {
 }
 
 /* ==========================================================================
+   EQUIPMENT RENTAL & KLEINANZEIGEN BANNER
+   ========================================================================== */
+.rental-banner {
+    margin-top: 3.5rem;
+    background: linear-gradient(135deg, rgba(134, 186, 38, 0.08) 0%, rgba(18, 24, 36, 0.95) 100%);
+    border: 1px solid rgba(134, 186, 38, 0.35);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.rental-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #86ba26;
+}
+
+.rental-banner-content {
+    max-width: 660px;
+}
+
+.rental-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #9cd433;
+    margin-bottom: 0.5rem;
+}
+
+.rental-banner h3 {
+    font-size: 1.45rem;
+    margin-bottom: 0.6rem;
+    color: #ffffff;
+}
+
+.rental-banner p {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.btn-kleinanzeigen {
+    background: #86ba26;
+    color: #ffffff !important;
+    white-space: nowrap;
+    box-shadow: 0 4px 18px rgba(134, 186, 38, 0.35);
+    font-weight: 600;
+}
+
+.btn-kleinanzeigen:hover {
+    background: #75a420;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(134, 186, 38, 0.5);
+}
+
+.footer-kleinanzeigen-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #9cd433;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color var(--transition-fast);
+}
+
+.footer-kleinanzeigen-link:hover {
+    color: #b4f043;
+    text-decoration: underline;
+}
+
+/* ==========================================================================
    CONTACT & BOOKING SECTION
    ========================================================================== */
 .contact-section {
@@ -1165,6 +1252,18 @@ footer {
 
     .equipment-grid {
         grid-template-columns: 1fr;
+    }
+
+    .rental-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.75rem;
+    }
+
+    .btn-kleinanzeigen {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 
     .contact-grid {
