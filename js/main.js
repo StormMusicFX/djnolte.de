@@ -163,4 +163,24 @@ document.addEventListener('DOMContentLoaded', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+
+    // 8. Interactive Genre Chips & Vibe Preview
+    const genreChips = document.querySelectorAll('#genreChips .genre-chip');
+    const genreVibeText = document.getElementById('genreVibeText');
+
+    genreChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+            genreChips.forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+
+            const genreName = chip.getAttribute('data-genre') || '';
+            const bpm = chip.getAttribute('data-bpm') || '';
+            const vibe = chip.getAttribute('data-vibe') || '';
+
+            if (genreVibeText) {
+                genreVibeText.innerHTML = `<strong>${genreName}:</strong> ${bpm} &bull; ${vibe}`;
+            }
+        });
+    });
 });
+
