@@ -1,512 +1,516 @@
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-
-    <title>DJ-Service Stefan Nolte</title>
-    <link href="https://web.archive.org/web/20240520121316cs_/http://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" type="text/css">
-
-    <script src="https://web.archive.org/web/20240520121316js_/https://use.fontawesome.com/5fb7047e6d.js"></script>
-
-    <style>
-        html {
-          font-family: 'Open Sans', sans-serif;
-          -ms-text-size-adjust: 100%;
-          -webkit-text-size-adjust: 100%;
-            box-sizing: border-box;
-        }
-
-        body {
-
-            background: #fff;
-            margin-left: 0;
-            margin-right: 0;
-            color: rgb(61, 61, 61);
-            font-size: 15px;
-            font-weight:300;
-        }
-
-        p {
-            margin: 5px 0;
-            line-height: 25px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #888;
-        }
-
-        h1 {
-            font-size: 1.25rem;
-        }
-
-        b, strong {font-weight:400;}
-
-
-
-        /* ========================================== */
-        /* HEADER UND NAVIGATION */
-
-        header {
-            position: relative;
-            margin: 20px auto 30px;
-            width: auto;
-            max-width: 800px;
-            height: auto;
-            text-align: center;
-        }
-
-        nav {
-            z-index: 9999;
-            background-color: rgb(61, 61, 61);
-            margin-top: 45px;
-        }
-
-        nav ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        nav ul li {
-            display: inline-block;
-            padding: 3px 20px;
-            color: rgb(255, 255, 255);
-        }
-
-        nav ul li a {
-            transition: color .5s ease;
-            font-weight: 400;
-        }
-
-        nav ul li a:hover,
-        nav ul li a:active {
-            color: #333;
-        }
-
-
-        /* ========================================== */
-        /* BLOECKE / BEREICHE DER SEITE */
-
-        section {
-            position: relative;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        section:nth-child(even) {
-            background-color: #ffffff;
-        }
-
-        figure {
-            margin: 0;
-        }
-
-        figure img {
-            max-width: 100%;
-        }
-
-        .multicolumn {
-            -webkit-perspective:1;
-
-            /* Anzahl Spalten */
-            -webkit-column-count: 2; /* Ch, Saf, And, BB */
-            -moz-column-count: 2; /* Fx */
-            column-count: 2; /* IE 10, Op 11.1+ */
-
-            /* Abstand Spalten */
-            webkit-column-gap: 4em;
-            -moz-column-gap: 4em;
-            column-gap: 4em;
-        }
-
-        .one-column {
-            margin-bottom: 60px;
-        }
-
-        .one-column p {
-            margin-bottom: 1.5rem;
-        }
-
-
-        article {
-            overflow: hidden;
-            width: 50%;
-            display: table-cell;
-            padding-right: 50px;
-        }
-
-        article h4 {
-            margin: 10px 0;
-        }
-
-
-        figcaption {
-            display: inline-block;
-            line-height: 25px;
-            margin-top: 20px;
-            max-width: 75%;
-        }
-
-        figcaption span {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 400;
-       }
-
-        .callout {
-            position: relative;
-            overflow: hidden;
-            margin: 0 auto;
-            padding: 0 10px 30px;
-            width: auto;
-            max-width: 800px;
-        }
-
-        .callout a {
-            text-decoration: underline;
-        }
-
-        .callout a:hover {
-            color: #b51212;
-        }
-
-        .callout > h3 {
-            font-weight: 300;
-            font-size: 30px;
-            text-align: center;
-        }
-
-        .callout > ul {
-            padding-left: 1rem;
-        }
-        .callout > ul li {
-            margin: 5px 0;
-        }
-
-
-        .definition-list dt {
-            margin-bottom: 0.21rem;
-            font-weight:400;
-        }
-
-        .definition-list dd {
-            margin: 0 0 1.5rem 0;
-        }
-
-        .secondary-heading {
-            font-weight: normal;
-            font-size: 15px;
-            color: #b51212;
-        }
-
-        .competency-heading {
-            margin-top: 60px;
-            font-weight: 400;
-        }
-
-        /* Lebenslaufbild oben */
-        .cliped-image {
-            border-radius: 0%;
-            /* ff */
-
-            /* Clip-Path als Alternative
-            -webkit-clip-path: circle(50% at 50% 50%);
-            clip-path: circle(50% at 50% 50%);
-            */
-        }
-
-        .zitat-image {
-            display: inline-block;
-            padding-right: 2px;
-            width: 45px;
-            height: 45px;
-            vertical-align: top;
-            line-height: 50px;
-            text-align: center;
-            background: #12a8b5;
-        }
-
-        .zitat-image + p {
-            display: inline-block;
-            margin: -5px 0 0 20px;
-            width: 90%;
-        }
-
-        .section-arrow {
-            position: relative;
-            top: -20px;
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: #a0adb7;
-            border-radius: 50%;
-            line-height: 40px !important;
-            text-align: center;
-            color: #fff;
-        }
-
-        .back-to-top-button {
-            position: relative;
-            top: -40px;
-            display: inline-block;
-            width: 70px;
-            height: 70px;
-            background: #616161;
-            border-radius: 50%;
-            line-height: 70px !important;
-            text-align: center;
-            color: #ffffff;
-        }
-
-
-        /* ========================================== */
-        /* FOOTER */
-        footer {
-            clear: both;
-            position: relative;
-            margin: 60px auto 0;
-            width: auto;
-            height: 100px;
-            text-align: center;
-            background: rgb(46, 46, 46);
-            color: #7d7d7d;
-        }
-
-        footer a:hover {
-            color: ;
-            text-decoration: underline;
-        }
-
-        footer .footer-copyright {
-            margin: -40px auto 0; /* -40px --> gleicher Wert wie bei .back-to-top-button */
-            max-width: 800px;
-            text-align: left;
-            padding-left: 10px;
-        }
-
-        footer i.rotate {
-            /* Pfeil nach oben - rotieren */
-            -webkit-transform: rotate(180deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
-            -ms-transform: rotate(180deg); /* IE 9 */
-            transform: rotate(180deg); /* IE 10, Fx 16+, Op 12.1+ */
-        }
-
-
-        /* ========================================== */
-        /* HELFER-KLASSEN */
-
-        .text-center {
-            text-align: center;
-        }
-
-        .text-left {
-            text-align: left !important;
-        }
-
-        .clear {
-            clear: both;
-        }
-
-        .mt30 {
-            margin-top: 35px !important;
-        }
-
-        .motto {
-            margin-bottom: 50px;
-        }
-
-        .hr-small {
-            margin: -20px auto 30px;
-            width: 240px;
-            border: solid 1px #b51212;
-        }
-
-        .font-licence {
-            margin-top: 10px;
-            font-size: 11px;
-        }
-
-        /* ========================================== */
-        /* ICONS */
-        .icons-social-media {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .icons-social-media > li {
-            display: inline-block;
-            padding: 0 7px 0 7px;
-            color: #888;
-        }
-
-        .icons-social-media > li i {
-            font-size: 20px;
-        }
-
-        .icons-social-media > li i:hover {
-            color: #333;
-            transition: color .5s ease;
-        }
-
-        .icon-location {
-            color: #b51212;
-            font-size: 25px !important;
-        }
-
-        .icon-mail {
-            color: #b51212;
-            font-size: 20px !important;
-        }
-
-
-        /* ========================================== */
-        /* MEDIA QUERIES FUER RESPONSIVE LAYOUT */
-
-        @media (max-width: 726px) {
-            .motto {
-                text-align: center;
-            }
-            .motto p {
-                margin-top: 10px;
-            }
-        }
-
-        @media (max-width: 641px) {
-            article {
-                display: block;
-                width: 100%;
-            }
-            figure {
-                margin: 30px auto 0;
-            }
-            figcaption {
-                display: block;
-                width: 55%;
-                margin: 0 auto;
-            }
-
-            .multicolumn {
-                webkit-column-gap: 2em;
-                -moz-column-gap: 2em;
-                column-gap: 2em;
-            }
-        }
-
-
-    </style><link rel="stylesheet" href="https://web.archive.org/web/20240520121316cs_/https://use.fontawesome.com/5fb7047e6d.css" media="all">
-
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>DJ Stefan Nolte | DJ-Service für Hochzeiten, Geburtstage & Events</title>
+    <meta name="description" content="Professioneller DJ-Service Stefan Nolte in Gelsenkirchen & NRW. Bester Sound, hochwertige Pioneer & dB Technologies Technik für Hochzeiten, Geburtstage und Firmenfeiern.">
+    <meta name="theme-color" content="#0b0e14">
+
+    <!-- Preconnect & Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom Modern Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
+    <!-- ========================================== -->
+    <!-- HEADER & NAVIGATION                        -->
+    <!-- ========================================== -->
+    <nav class="site-nav">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-brand" aria-label="Startseite DJ Stefan Nolte">
+                <div class="brand-badge">
+                    <i class="fa-solid fa-compact-disc"></i>
+                </div>
+                <div class="brand-name">
+                    <span class="title">DJ Stefan Nolte</span>
+                    <span class="sub">Event & Party DJ</span>
+                </div>
+            </a>
 
-<!-- ============================================================================================================================== -->
-<!-- HEADER -->
-<header id="header-start">
-    <img src="https://i.ibb.co/xss2wXF/DSCF8939.jpg" alt="DSCF8939" border="0">
-   <h1>DJ Stefan Nolte</h1>
-<a href="#kapitel1">Über mich</a>&nbsp;&nbsp;
-<a href="#kapitel2">Meine Musik</a>&nbsp;&nbsp;
-<a href="#kapitel3">Die Technik</a>&nbsp;&nbsp;
-</header>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-<!-- ============================================================================================================================== -->
-<!-- BLOCK 1 -->
-<h2 id="kapitel1"></h2>
-<section id="block-1">
-    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
-    <div class="callout text-left">
-        <h3>Über mich:</h3>
-        <hr class="hr-small">
-
-
-        <h4 class="secondary-heading">Wer ich bin?</h4>
-        <div class="one-column">
-            <p>
-            Schon viele Jahre bin ich ein großer Musikliebhaber. Letztendlich habe ich mich im Sommer 2017 dazu entschlossen aus meiner Leidenschaft einen Nebenjob zu machen, da ich automatisch bei jeder Feier, die Bekannte, Verwandte oder Freunde ausrichten, als der Musikbeauftragte gelte. Ich konnte mich mit dieser Rolle immer gut identifizieren, weshalb ich mich auf der Suche nach einem Nebenjob sehr schnell für das Auflegen entschied. Mit der Zeit wuchs natürlich die Erfahrung, aber auch die technischen Möglichkeiten konnte ich mit immer besserer und professionellerer Technik verbessern.
-<!-- BLOCK 1 -->
-</p><h2 id="kapitel2"></h2>
-<section id="block-1">
-    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
-    <div class="callout text-left">
-        <h3>Meine Musik:</h3>
-        <hr class="hr-small">
-            
-
-        <h4 class="secondary-heading">Für jeden Geschmack was dabei!</h4>
-        <div class="one-column">
-            <p>
-               Als DJ spiele ich bevorzugt elektronische Musik, wie EDM, Hands up oder Deep House, allerdings ist es natürlich meine Aufgabe als Disc-Jockey mit Musikrichtungen, wie Schlager etc. zu unterhalten, sowie möglichst jeden Musikwunsch, egal aus welchem Genre zu erfüllen. Dank meiner großen Musikbibliothek kann ich ein breites Spektrum an Geschmäckern erreichen und bin so für Hochzeiten, Geburtstage, Firmenfeiern und sonstigen Partys gewappnet. 
-            </p>
-            <p>
-        </p>
-    </div>
-</div></section>
-
-
-
-
-<!-- ============================================================================================================================== -->
-<!-- BLOCK 1 -->
-<h2 id="kapitel3"></h2>
-<section id="block-1">
-    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
-    <div class="callout text-left">
-        <h3>Die Technik:</h3>
-        <hr class="hr-small">
-
-
-        <h4 class="secondary-heading">Mein Equipment:</h4>
-        <div class="one-column">
-            <p>
-               Zusammen mit meinem Team halte ich einen großen Fundus an Technik zum Beschallen, Beleuchten und Vernebeln bereit. Mit meinem professionellen Pioneer Dj-Mischpult (XDJ-RX) habe ich die Hebel in der Hand, um den richtigen Beat auf die Anlage zu bringen, die mir durch meinen Partner zur Verfügung gestellt wird. Für Feiern zwischen 12 und 120 Personen trete ich mit einer PA-Anlage der Firma dB Technologies, aus der B-Hype Serie auf, welche eine hohe Lautstärke mit ausgewogenen Höhen und kräftigen Bässen vereint. Optional lassen sich auch Licht-, Nebel-, oder Seifenblasenmaschinen, sowie Pavillions optional dazubuchen.
-            
-        </p></div>
-    </div>
-</section>
-
-
-
-
-
-<!-- ============================================================================================================================== -->
-<!-- BLOCK 4 -->
-<section id="block-4">
-    <i class="fa fa-chevron-down section-arrow" aria-hidden="true"></i>
-    <div class="callout text-center">
-        <h3>Kontakt / Impressum</h3>
-        <hr class="hr-small">
-
-        <p>
-            <i class="fa fa-map-marker icon-location" aria-hidden="true"></i><br>
-            <span>Diese Website wird betrieben durch</span> <br>
-            <span>Stefan Nolte</span> <br>
-            <span>Rosenstr. 60</span> <br>
-            <span>45899 Gelsenkirchen</span> <br>
-            <span>Deutschland</span> <br>
-            <span>Tele:01577/5430433</span> <br>
-            <span>UST ID: DE 32 66 41 615</span> <br>
-            <span>Es wird keine Haftung für externe Links übernommen</span>
-        </p>
-        <p class="mt30">
-            <i class="fa fa-envelope-o icon-mail" aria-hidden="true"></i><br>
-            <span>info@djnolte.de</span>
-        </p>
-    </div>
-</section>
-
-<!-- ============================================================================================================================== -->
-<!-- FOOTER -->
-<footer>
-    <a href="#header-start" class="back-to-top-button"><i class="fa fa-chevron-down rotate" aria-hidden="true"></i></a>
-    <div class="footer-copyright">
-        © Stefan Nolte 2026
-
-        <div class="font-licence">
-            <a href="https://web.archive.org/web/20240520121316/http://fortawesome.github.com/Font-Awesome/">FontAwesome</a> icons licensed under <a href="https://web.archive.org/web/20240520121316/http://scripts.sil.org/OFL_web"> SIL OFL</a>.
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#ueber-mich" class="nav-link">Über mich</a></li>
+                <li><a href="#musik" class="nav-link">Meine Musik</a></li>
+                <li><a href="#technik" class="nav-link">Die Technik</a></li>
+                <li><a href="#kontakt" class="nav-link">Kontakt & Impressum</a></li>
+                <li><a href="#anfrage" class="nav-cta-btn"><i class="fa-regular fa-calendar-check"></i> Jetzt anfragen</a></li>
+            </ul>
         </div>
+    </nav>
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION                               -->
+    <!-- ========================================== -->
+    <header class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <span class="hero-tag-dot"></span>
+                        Buchbar für 2026 & Folgejahre • Gelsenkirchen & NRW
+                    </div>
+                    <h1 class="hero-title">
+                        Der perfekte <span class="text-gradient">Soundtrack</span> für dein nächstes Event.
+                    </h1>
+                    <p class="hero-subtitle">
+                        Professioneller DJ-Service mit Leidenschaft, erstklassigem Sound und modernster Ton- & Lichttechnik für Hochzeiten, Geburtstage, Firmenfeiern und Partys.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#anfrage" class="btn btn-primary">
+                            <i class="fa-solid fa-bolt"></i> Unverbindlich anfragen
+                        </a>
+                        <a href="#technik" class="btn btn-outline">
+                            <i class="fa-solid fa-sliders"></i> Equipment entdecken
+                        </a>
+                    </div>
+
+                    <!-- Hero Quick Stats -->
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">Seit 2017</span>
+                            <span class="stat-label">Erfahrung am Mischpult</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">12 – 120+</span>
+                            <span class="stat-label">Gäste Beschallung</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Wunschmusik-Garantie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DJ Hero Image & Spotlight Card -->
+                <div class="hero-image-wrapper">
+                    <div class="hero-card-glow"></div>
+                    <div class="hero-image-card">
+                        <div class="dj-avatar-container">
+                            <img src="https://i.ibb.co/xss2wXF/DSCF8939.jpg" alt="DJ Stefan Nolte am Mischpult" class="dj-avatar-img">
+                            
+                            <!-- Floating Status Badge -->
+                            <div class="dj-floating-badge">
+                                <div class="floating-badge-info">
+                                    <h4>DJ Stefan Nolte</h4>
+                                    <p><i class="fa-solid fa-headphones"></i> Live on the Decks</p>
+                                </div>
+                                <div class="soundwave-indicator" aria-hidden="true">
+                                    <span class="soundwave-bar"></span>
+                                    <span class="soundwave-bar"></span>
+                                    <span class="soundwave-bar"></span>
+                                    <span class="soundwave-bar"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- SECTION 1: ÜBER MICH                      -->
+    <!-- ========================================== -->
+    <section id="ueber-mich">
+        <!-- Anchor for backward compatibility with kapitel1 -->
+        <div id="kapitel1"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pill"><i class="fa-regular fa-user"></i> Biografie & Leidenschaft</div>
+                <h2 class="section-title">Wer ich bin & wie alles begann</h2>
+                <p class="section-description">Aus wahrer Leidenschaft zur Musik wurde ein professioneller DJ-Service.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-quote">
+                        „Musik verbindet Menschen und macht besondere Momente unvergesslich.“
+                    </div>
+                    <div class="about-text">
+                        <p>
+                            Schon viele Jahre bin ich ein großer Musikliebhaber. Letztendlich habe ich mich im Sommer 2017 dazu entschlossen aus meiner Leidenschaft einen Nebenjob zu machen, da ich automatisch bei jeder Feier, die Bekannte, Verwandte oder Freunde ausrichten, als der Musikbeauftragte gelte.
+                        </p>
+                        <p>
+                            Ich konnte mich mit dieser Rolle immer gut identifizieren, weshalb ich mich auf der Suche nach einem Nebenjob sehr schnell für das Auflegen entschied. Mit der Zeit wuchs natürlich die Erfahrung, aber auch die technischen Möglichkeiten konnte ich mit immer besserer und professionellerer Technik verbessern.
+                        </p>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-heart-pulse feature-icon"></i>
+                            <h4>Echtes Gespür</h4>
+                            <p>Intuitive Musikauswahl, abgestimmt auf die Stimmung des Publikums.</p>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fa-solid fa-shield-halved feature-icon"></i>
+                            <h4>Zuverlässigkeit</h4>
+                            <p>Pünktlicher Aufbau, professionelle Betreuung und transparente Absprachen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Formats -->
+                <div class="events-column">
+                    <div class="event-type-card">
+                        <div class="event-icon-circle">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                        </div>
+                        <div class="event-type-info">
+                            <h4>Hochzeiten</h4>
+                            <p>Emotionale Begleitung vom Sektempfang bis zur ausgelassenen Party bis in den Morgen.</p>
+                        </div>
+                    </div>
+
+                    <div class="event-type-card">
+                        <div class="event-icon-circle">
+                            <i class="fa-solid fa-cake-candles"></i>
+                        </div>
+                        <div class="event-type-info">
+                            <h4>Geburtstage & Jubiläen</h4>
+                            <p>Die besten Hits aus allen Jahrzehnten für Jung und Alt im perfekten Flow.</p>
+                        </div>
+                    </div>
+
+                    <div class="event-type-card">
+                        <div class="event-icon-circle">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="event-type-info">
+                            <h4>Firmenevents & Partys</h4>
+                            <p>Stilsichere Musik für Sommerfeste, Weihnachtsfeiern und Teamevents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 2: MEINE MUSIK                     -->
+    <!-- ========================================== -->
+    <section id="musik">
+        <!-- Anchor for backward compatibility with kapitel2 -->
+        <div id="kapitel2"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pill"><i class="fa-solid fa-music"></i> Vielfalt & Sound</div>
+                <h2 class="section-title">Meine Musik: Für jeden Geschmack was dabei!</h2>
+                <p class="section-description">Vom deepen Beat bis zum zeitlosen Partyklassiker – flexibel und genresicher.</p>
+            </div>
+
+            <div class="genres-wrapper">
+                <div class="genre-chips-container">
+                    <span class="genre-chip favorite"><i class="fa-solid fa-fire"></i> EDM & Festival</span>
+                    <span class="genre-chip favorite"><i class="fa-solid fa-wave-square"></i> Deep House</span>
+                    <span class="genre-chip favorite"><i class="fa-solid fa-bolt"></i> Hands Up</span>
+                    <span class="genre-chip"><i class="fa-solid fa-star"></i> Charts & Radio-Hits</span>
+                    <span class="genre-chip"><i class="fa-solid fa-record-vinyl"></i> 80er / 90er / 2000er</span>
+                    <span class="genre-chip"><i class="fa-solid fa-beer-mug-empty"></i> Schlager & Partyhits</span>
+                    <span class="genre-chip"><i class="fa-solid fa-guitar"></i> Pop & Rock Classics</span>
+                    <span class="genre-chip"><i class="fa-solid fa-compact-disc"></i> Dance & Club</span>
+                </div>
+
+                <div style="max-width: 820px; margin: 0 auto; text-align: center;">
+                    <p style="font-size: 1.15rem; color: #f1f5f9; margin-bottom: 1.25rem;">
+                        Als DJ spiele ich bevorzugt elektronische Musik, wie <strong>EDM, Hands up oder Deep House</strong>. Allerdings ist es natürlich meine Aufgabe als Disc-Jockey mit Musikrichtungen wie <strong>Schlager etc.</strong> zu unterhalten, sowie möglichst jeden Musikwunsch, egal aus welchem Genre, zu erfüllen.
+                    </p>
+                    <p style="color: var(--text-secondary);">
+                        Dank meiner großen Musikbibliothek kann ich ein breites Spektrum an Geschmäckern erreichen und bin so für Hochzeiten, Geburtstage, Firmenfeiern und sonstige Partys optimal gewappnet.
+                    </p>
+                </div>
+
+                <div class="music-details-grid">
+                    <div class="music-detail-card">
+                        <i class="fa-solid fa-database"></i>
+                        <h4>Riesige Musiksammlung</h4>
+                        <p>Tausende Titel jederzeit griffbereit – von All-Time-Favorites bis zu aktuellen Club-Hits.</p>
+                    </div>
+                    <div class="music-detail-card">
+                        <i class="fa-solid fa-microphone-lines"></i>
+                        <h4>Musikwünsche erwünscht</h4>
+                        <p>Eure Wünsche und die eurer Gäste werden nahtlos in das laufende Set integriert.</p>
+                    </div>
+                    <div class="music-detail-card">
+                        <i class="fa-solid fa-sliders"></i>
+                        <h4>Dynamischer Mix</h4>
+                        <p>Fließende Übergänge und ein lebendiges Tempo ohne störende Pausen oder Brüche.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 3: DIE TECHNIK                     -->
+    <!-- ========================================== -->
+    <section id="technik">
+        <!-- Anchor for backward compatibility with kapitel3 -->
+        <div id="kapitel3"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pill"><i class="fa-solid fa-sliders"></i> Profi-Equipment</div>
+                <h2 class="section-title">Die Technik: Zuverlässig, kraftvoll & brillant</h2>
+                <p class="section-description">High-End Audio und stimmungsvolle Lichttechnik für Events mit 12 bis 120+ Personen.</p>
+            </div>
+
+            <div class="equipment-grid">
+                <!-- DJ Controller -->
+                <div class="equipment-card">
+                    <div>
+                        <span class="equipment-badge">DJ Setup</span>
+                        <div class="equipment-icon">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </div>
+                        <h3>Pioneer XDJ-RX</h3>
+                        <p>
+                            Mit meinem professionellen Pioneer DJ-Mischpult (XDJ-RX) habe ich alle Hebel in der Hand, um den richtigen Beat präzise und glasklar auf die Anlage zu bringen.
+                        </p>
+                    </div>
+                    <ul class="equipment-features">
+                        <li><i class="fa-solid fa-check"></i> Professioneller All-in-One Controller</li>
+                        <li><i class="fa-solid fa-check"></i> Höchste Klangqualität & Signalstabilität</li>
+                        <li><i class="fa-solid fa-check"></i> Dual-Deck Performance & Hot Cues</li>
+                    </ul>
+                </div>
+
+                <!-- PA System -->
+                <div class="equipment-card">
+                    <div>
+                        <span class="equipment-badge">Sound & PA</span>
+                        <div class="equipment-icon">
+                            <i class="fa-solid fa-volume-high"></i>
+                        </div>
+                        <h3>dB Technologies B-Hype</h3>
+                        <p>
+                            Für Feiern zwischen 12 und 120 Personen trete ich mit einer PA-Anlage der dB Technologies B-Hype Serie auf – hohe Lautstärke mit ausgewogenen Höhen und kräftigen Bässen.
+                        </p>
+                    </div>
+                    <ul class="equipment-features">
+                        <li><i class="fa-solid fa-check"></i> Ideal für 12 bis 120+ Gäste</li>
+                        <li><i class="fa-solid fa-check"></i> Ausgewogener Sound bei jeder Lautstärke</li>
+                        <li><i class="fa-solid fa-check"></i> Zuverlässige Technik mit Partner-Support</li>
+                    </ul>
+                </div>
+
+                <!-- Special Effects & Add-ons -->
+                <div class="equipment-card">
+                    <div>
+                        <span class="equipment-badge">Optionale Extras</span>
+                        <div class="equipment-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3>Licht, Effekte & Pavillons</h3>
+                        <p>
+                            Zusammen mit meinem Team halte ich einen großen Fundus an Technik zum Beschallen, Beleuchten und Vernebeln bereit – alles flexibel zubuchbar.
+                        </p>
+                    </div>
+                    <ul class="equipment-features">
+                        <li><i class="fa-solid fa-check"></i> Moderne Lichteffekte & Dancefloor-Strahler</li>
+                        <li><i class="fa-solid fa-check"></i> Nebel- & Seifenblasenmaschinen</li>
+                        <li><i class="fa-solid fa-check"></i> Wetterfeste Pavillons buchbar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECTION 4: KONTAKT & ANFRAGE               -->
+    <!-- ========================================== -->
+    <section class="contact-section" id="kontakt">
+        <div id="anfrage"></div>
+        <div class="container">
+            <div class="section-header">
+                <div class="section-pill"><i class="fa-regular fa-envelope"></i> Unverbindlich anfragen</div>
+                <h2 class="section-title">Lass uns über deine Feier sprechen!</h2>
+                <p class="section-description">Hast du einen Termin im Blick oder Fragen zum Equipment? Schreib mir gerne direkt.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left: Quick Contact Info -->
+                <div class="contact-info-panel">
+                    <!-- Phone -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telefon & WhatsApp</h4>
+                            <a href="tel:015775430433">01577 / 5430433</a>
+                        </div>
+                        <button class="copy-btn" data-copy="015775430433" title="Nummer kopieren" aria-label="Telefonnummer kopieren">
+                            <i class="fa-regular fa-copy"></i> Kopieren
+                        </button>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>E-Mail Adresse</h4>
+                            <a href="mailto:info@djnolte.de">info@djnolte.de</a>
+                        </div>
+                        <button class="copy-btn" data-copy="info@djnolte.de" title="E-Mail kopieren" aria-label="E-Mail-Adresse kopieren">
+                            <i class="fa-regular fa-copy"></i> Kopieren
+                        </button>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Standort & Region</h4>
+                            <span>45899 Gelsenkirchen</span>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Einsatzbereit in ganz NRW und Umgebung</p>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp / Phone CTAs -->
+                    <div class="direct-actions-bar">
+                        <a href="https://wa.me/4915775430433?text=Hallo%20Stefan,%20ich%20m%C3%B6chte%20ein%20Event%20anfragen." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="flex: 1;">
+                            <i class="fa-brands fa-whatsapp"></i> Direkt via WhatsApp
+                        </a>
+                        <a href="tel:015775430433" class="btn btn-outline" style="flex: 1;">
+                            <i class="fa-solid fa-phone"></i> Jetzt anrufen
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive Inquiry Form -->
+                <div class="booking-form-card">
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.4rem;">
+                        <i class="fa-solid fa-paper-plane" style="color: var(--primary); margin-right: 0.5rem;"></i> Event-Anfrage senden
+                    </h3>
+
+                    <form id="bookingForm" onsubmit="return false;">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="formName">Dein Name *</label>
+                                <input type="text" id="formName" class="form-control" placeholder="z. B. Max Mustermann" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="formDate">Wunschdatum</label>
+                                <input type="date" id="formDate" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="formType">Art der Veranstaltung</label>
+                                <select id="formType" class="form-control">
+                                    <option value="Hochzeit">Hochzeit</option>
+                                    <option value="Geburtstag">Geburtstag</option>
+                                    <option value="Firmenfeier">Firmenfeier / Betriebsfeier</option>
+                                    <option value="Club / Party">Club / Öffentliche Party</option>
+                                    <option value="Sonstiges">Sonstiges Event</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="formGuests">Geschätzte Gästeanzahl</label>
+                                <select id="formGuests" class="form-control">
+                                    <option value="12 - 50 Personen">12 – 50 Personen</option>
+                                    <option value="50 - 100 Personen" selected>50 – 100 Personen</option>
+                                    <option value="100 - 120 Personen">100 – 120 Personen</option>
+                                    <option value="Über 120 Personen">Über 120 Personen</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formNotes">Deine Nachricht & Wünsche</label>
+                            <textarea id="formNotes" class="form-control" placeholder="Erzähle kurz von deiner Location, dem Musikstil oder speziellen Wünschen..."></textarea>
+                        </div>
+
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+                            <button type="button" id="sendMailBtn" class="btn btn-primary" style="flex: 1;">
+                                <i class="fa-solid fa-envelope"></i> Per E-Mail anfragen
+                            </button>
+                            <button type="button" id="sendWhatsAppBtn" class="btn btn-whatsapp" style="flex: 1;">
+                                <i class="fa-brands fa-whatsapp"></i> Per WhatsApp anfragen
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ========================================== -->
+            <!-- IMPRESSUM ACCORDION                        -->
+            <!-- ========================================== -->
+            <div class="legal-accordion" id="legalAccordion">
+                <div class="legal-header" id="legalToggle" role="button" tabindex="0" aria-expanded="false">
+                    <h3><i class="fa-solid fa-scale-balanced" style="color: var(--primary);"></i> Impressum & Rechtliche Angaben</h3>
+                    <i class="fa-solid fa-chevron-down legal-toggle-icon"></i>
+                </div>
+                <div class="legal-content">
+                    <div class="legal-grid">
+                        <div class="legal-box">
+                            <h4>Angaben gemäß § 5 TMG</h4>
+                            <p><strong>Stefan Nolte</strong></p>
+                            <p>Rosenstr. 60</p>
+                            <p>45899 Gelsenkirchen</p>
+                            <p>Deutschland</p>
+                            <p style="margin-top: 0.75rem;"><strong>Kontakt:</strong></p>
+                            <p>Telefon: 01577 / 5430433</p>
+                            <p>E-Mail: <a href="mailto:info@djnolte.de">info@djnolte.de</a></p>
+                        </div>
+
+                        <div class="legal-box">
+                            <h4>Umsatzsteuer-ID</h4>
+                            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:</p>
+                            <p><strong>DE 32 66 41 615</strong></p>
+                            <h4 style="margin-top: 1.25rem;">Haftung für Links</h4>
+                            <p>
+                                Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb übernehmen wir für diese fremden Inhalte keine Haftung. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer>
+        <div class="container footer-inner">
+            <div class="footer-copy">
+                &copy; 2026 <strong>Stefan Nolte</strong> &bull; DJ-Service Stefan Nolte. Alle Rechte vorbehalten.
+            </div>
+            <div>
+                <a href="#hero" class="back-to-top" title="Nach oben scrollen" aria-label="Nach oben scrollen">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification for Copy Actions -->
+    <div class="toast-notice" id="toastNotice" role="alert" aria-live="polite">
+        <i class="fa-solid fa-circle-check" style="color: var(--primary);"></i>
+        <span class="toast-text">In die Zwischenablage kopiert!</span>
     </div>
-</footer>
 
-
-
-</div></div></section></body></html>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
